@@ -47,7 +47,7 @@ const CTA: FC<CTAProps> = ({ className, ...rest }) => {
           align="center"
           color="secondary"
         >
-          Download Devias Material Kit today.
+          Download Firestore Admin UI Kit today.
         </Typography>
         <Box
           mt={6}
@@ -58,7 +58,7 @@ const CTA: FC<CTAProps> = ({ className, ...rest }) => {
           <Button
             color="secondary"
             component="a"
-            href="https://material-ui.com/store/items/devias-kit-pro"
+            href=""
             variant="contained"
           >
             Get the kit

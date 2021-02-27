@@ -44,7 +44,7 @@ const Features: FC<FeaturesProps> = ({ className, ...rest }) => {
           color="secondary"
           align="center"
         >
-          Explore Devias Kit Pro
+          Firestore Admin UI
         </Typography>
         <Typography
           variant="h1"

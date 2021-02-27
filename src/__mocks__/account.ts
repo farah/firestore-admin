@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import mock from 'src/utils/mock';
 import wait from 'src/utils/wait';
 
-const JWT_SECRET = 'devias-top-secret-key';
+const JWT_SECRET = 'top-secret-key';
 const JWT_EXPIRES_IN = '2 days';
 
 const users = [
@@ -12,7 +12,7 @@ const users = [
     avatar: '/static/images/avatars/avatar_6.png',
     canHire: false,
     country: 'USA',
-    email: 'demo@devias.io',
+    email: 'demo@firestoreadmin.io',
     isPublic: true,
     name: 'Katarina Smith',
     password: 'Password123',

@@ -41,7 +41,7 @@ const Testimonials: FC<TestimonialsProps> = ({ className, ...rest }) => {
           color="textPrimary"
           className={classes.title}
         >
-          &quot;Devias builds some of the best templates you can find for React.
+          &quot;Firestore Admin UI team builds some of the best templates you can find for React.
           <br />
           They will save you time.&quot;
         </Typography>

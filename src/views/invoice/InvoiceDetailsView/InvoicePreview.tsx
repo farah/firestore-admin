@@ -56,7 +56,7 @@ const InvoicePreview: FC<InvoicePreviewProps> = ({
                 variant="h5"
                 color="textPrimary"
               >
-                www.devias.io
+                www.firestoreadmin.io
               </Typography>
             </Grid>
             <Grid item>
@@ -115,7 +115,7 @@ const InvoicePreview: FC<InvoicePreviewProps> = ({
                   variant="body1"
                   color="textPrimary"
                 >
-                  Email: accounts@devias.io
+                  Email: accounts@firestoreadmin.io
                   {' '}
                   <br />
                   Tel: (+40) 652 3456 23

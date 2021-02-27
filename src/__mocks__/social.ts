@@ -15,10 +15,10 @@ mock.onGet('/api/social/profile').reply(() => {
     cover: '/static/images/covers/cover_1.jpg',
     currentCity: 'Bucharest',
     currentJob: {
-      company: 'Devias IO',
+      company: 'Firestore Admin U',
       title: 'Product Designer'
     },
-    email: 'katarina.smith@devias.io',
+    email: 'katarina.smith@firestoreadmin.io',
     name: 'Katarina Smith',
     originCity: 'Rm. Valcea',
     previousJob: {

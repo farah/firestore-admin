@@ -86,7 +86,7 @@ const Hero: FC<HeroProps> = ({ className, ...rest }) => {
                 variant="h1"
                 color="textPrimary"
               >
-                Devias React Material Kit - PRO
+                Firestore Admin UI Kit - PRO
               </Typography>
               <Box mt={3}>
                 <Typography

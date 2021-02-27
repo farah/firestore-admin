@@ -111,7 +111,7 @@ const InvoicePDF: FC<InvoicePDFProps> = ({ invoice }) => {
               style={styles.brand}
             />
             <Text style={styles.h5}>
-              www.devias.io
+              www.firestoreadmin.io
             </Text>
           </View>
           <View>
@@ -146,7 +146,7 @@ const InvoicePDF: FC<InvoicePDFProps> = ({ invoice }) => {
           </View>
           <View>
             <Text style={styles.body1}>
-              Email: accounts@devias.io
+              Email: accounts@firestoreadmin.io
             </Text>
             <Text style={styles.body1}>
               Tel: (+40) 652 3456 23

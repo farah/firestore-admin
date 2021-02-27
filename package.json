@@ -1,6 +1,6 @@
 {
-  "name": "@devias-io/material-kit-pro-react",
-  "author": "DeviasIO",
+  "name": "@firestore-admin/core",
+  "author": "Ali Farah",
   "licence": "UNLICENSED",
   "version": "3.1.0",
   "private": true,
@@ -9,7 +9,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "commit": "lint-staged && git-cz --no-verify"
   },
   "browserslist": {
     "production": [
@@ -25,8 +26,26 @@
       "last 1 safari version"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableScopeLowerCase": true,
+      "disableSubjectLowerCase": true,
+      "maxHeaderWidth": 72
+    }
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --fix --ext 'current/**/*.js' --ignore-path .gitignore"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.11.0",
+    "@commitlint/cli": "^10.0.0",
+    "@commitlint/config-conventional": "^10.0.0",
     "@date-io/core": "^2.8.0",
     "@date-io/moment": "^1.3.13",
     "@fullcalendar/core": "^4.4.2",
@@ -69,6 +88,7 @@
     "change-case": "^4.1.1",
     "chart.js": "^2.9.3",
     "clsx": "^1.1.1",
+    "cz-conventional-changelog": "^3.3.0",
     "draft-js": "^0.11.6",
     "firebase": "^7.17.1",
     "formik": "^2.1.5",
@@ -125,6 +145,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4",
     "mdx-loader": "^3.0.2",
     "numeral": "^2.0.6",
     "prettier": "^1.19.1",

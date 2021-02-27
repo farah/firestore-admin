@@ -109,7 +109,7 @@ mock.onGet('/api/reports/latest-orders').reply(() => {
         .toDate()
         .getTime(),
       customer: {
-        email: 'ekaterina@devias.io',
+        email: 'ekaterina@firestoreadmin.io',
         name: 'Ekaterina Tankova'
       },
       currency: '$',
@@ -127,7 +127,7 @@ mock.onGet('/api/reports/latest-orders').reply(() => {
         .toDate()
         .getTime(),
       customer: {
-        email: 'cao.yu@devias.io',
+        email: 'cao.yu@firestoreadmin.io',
         name: 'Cao Yu'
       },
       currency: '$',
@@ -145,7 +145,7 @@ mock.onGet('/api/reports/latest-orders').reply(() => {
         .toDate()
         .getTime(),
       customer: {
-        email: 'alex.richardson@devias.io',
+        email: 'alex.richardson@firestoreadmin.io',
         name: 'Alex Richardson'
       },
       currency: '$',
@@ -163,7 +163,7 @@ mock.onGet('/api/reports/latest-orders').reply(() => {
         .toDate()
         .getTime(),
       customer: {
-        email: 'anje.keiser@devias.io',
+        email: 'anje.keiser@firestoreadmin.io',
         name: 'Anje Keizer'
       },
       currency: '$',
@@ -182,7 +182,7 @@ mock.onGet('/api/reports/latest-orders').reply(() => {
         .getTime(),
       customer: {
         name: 'Clarke Gillebert',
-        email: 'clarke.gillebert@devias.io'
+        email: 'clarke.gillebert@firestoreadmin.io'
       },
       currency: '$',
       items: 5,
@@ -199,7 +199,7 @@ mock.onGet('/api/reports/latest-orders').reply(() => {
         .toDate()
         .getTime(),
       customer: {
-        email: 'merrile.burgett@devias.io',
+        email: 'merrile.burgett@firestoreadmin.io',
         name: 'Merrile Burgett'
       },
       currency: '$',
