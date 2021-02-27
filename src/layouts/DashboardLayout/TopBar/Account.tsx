@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import type { FC } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 import {
   Avatar,
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Account: FC = () => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const ref = useRef<any>(null);
   const { user, logout } = useAuth();
   const { enqueueSnackbar } = useSnackbar();
@@ -49,7 +49,7 @@ const Account: FC = () => {
     try {
       handleClose();
       await logout();
-      history.push('/');
+      navigate('/');
     } catch (err) {
       console.error(err);
       enqueueSnackbar('Unable to logout', {

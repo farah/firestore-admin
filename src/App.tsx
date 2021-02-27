@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
-import { Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { create } from 'jss';
 import rtl from 'jss-rtl';
@@ -20,10 +20,9 @@ import SettingsNotification from 'src/components/SettingsNotification';
 import { AuthProvider } from 'src/contexts/JWTAuthContext';
 import useSettings from 'src/hooks/useSettings';
 import { createTheme } from 'src/theme';
-import routes, { renderRoutes } from 'src/routes';
+import Root from 'src/routes';
 
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
-const history = createBrowserHistory();
 
 const App: FC = () => {
   const { settings } = useSettings();
@@ -42,16 +41,17 @@ const App: FC = () => {
             dense
             maxSnack={3}
           >
-            <Router history={history}>
+        <BrowserRouter>
               <AuthProvider>
                 <GlobalStyles />
                 <ScrollReset />
                 <GoogleAnalytics />
                 <CookiesNotification />
                 <SettingsNotification />
-                {renderRoutes(routes)}
+                 <Root />
               </AuthProvider>
-            </Router>
+              </BrowserRouter>
+        
           </SnackbarProvider>
         </MuiPickersUtilsProvider>
       </StylesProvider>

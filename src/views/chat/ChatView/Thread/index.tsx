@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import type { FC } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   Box,
   Divider,
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Thread: FC = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { threadKey } = useParams();
   const { activeThreadId, participants, recipients } = useSelector((state) => state.chat);
   const thread = useSelector((state) => threadSelector(state));
@@ -87,7 +87,7 @@ const Thread: FC = () => {
         // the server throws an error, this means that the user tried a shady route
         // and we redirect him on the compose route
         console.error(err);
-        history.push('/app/chat/new');
+        navigate('/app/chat/new');
       }
     };
 

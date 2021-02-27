@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
@@ -48,19 +48,19 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const Toolbar: FC<ToolbarProps> = ({ className, ...rest }) => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { systemLabel, customLabel } = useParams();
 
   const handleBack = (): void => {
     if (systemLabel) {
-      return history.push(`/app/mail/${systemLabel}`);
+      return navigate(`/app/mail/${systemLabel}`);
     }
 
     if (customLabel) {
-      return history.push(`/app/mail/label/${customLabel}`);
+      return navigate(`/app/mail/label/${customLabel}`);
     }
 
-    return history.push('/app/mail/inbox');
+    return navigate('/app/mail/inbox');
   };
 
   return (

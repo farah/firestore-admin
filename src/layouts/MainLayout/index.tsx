@@ -3,6 +3,7 @@ import type { FC, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 import TopBar from './TopBar';
+import { Outlet } from 'react-router';
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -43,7 +44,7 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
           <div className={classes.content}>
-            {children}
+            <Outlet />
           </div>
         </div>
       </div>

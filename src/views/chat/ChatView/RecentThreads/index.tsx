@@ -5,7 +5,7 @@ import type {
   FocusEvent
 } from 'react';
 import clsx from 'clsx';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { makeStyles } from '@material-ui/core';
 import type { Contact } from 'src/types/chat';
@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
 
 const RecentThreads: FC = () => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [isSearchFocused, setSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Contact[]>([]);
@@ -63,7 +63,7 @@ const RecentThreads: FC = () => {
   const handleSearchSelect = (result: any): void => {
     setSearchFocused(false);
     setSearchQuery('');
-    history.push(`/app/chat/${result.username}`);
+    navigate(`/app/chat/${result.username}`);
   };
 
   return (

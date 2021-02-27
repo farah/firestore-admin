@@ -52,7 +52,7 @@ const Settings: FC<SettingsProps> = ({ className, ...rest }) => {
       </IconButton>
       <IconButton
         component={RouterLink}
-        to="/app/chat/new"
+        to="/app/chat"
       >
         <SvgIcon fontSize="small">
           <EditIcon />

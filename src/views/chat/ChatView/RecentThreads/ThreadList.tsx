@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { List, makeStyles } from '@material-ui/core';
@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
 const ThreadList: FC<ThreadListProps> = ({ className, ...rest }) => {
   const classes = useStyles();
   const { threads, activeThreadId } = useSelector((state) => state.chat);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSelect = (threadId: string): void => {
     const thread = threads.byId[threadId];
@@ -34,7 +34,7 @@ const ThreadList: FC<ThreadListProps> = ({ className, ...rest }) => {
       threadKey = otherParticipant.username;
     }
 
-    history.push(`/app/chat/${threadKey}`);
+    navigate(`/app/chat/${threadKey}`);
   };
 
   return (

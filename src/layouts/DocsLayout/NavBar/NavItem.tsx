@@ -97,7 +97,6 @@ const NavItem: FC<NavItemProps> = ({
         activeClassName={classes.active}
         className={clsx(classes.buttonLeaf, `depth-${depth}`)}
         component={RouterLink}
-        exact
         style={style}
         to={href}
       >

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FC, ReactNode } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import useAuth from '../hooks/useAuth';
 
@@ -12,7 +12,7 @@ const AuthGuard: FC<AuthGuardProps> = ({ children }) => {
   const { isAuthenticated } = useAuth();
 
   if (!isAuthenticated) {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
 
   return (

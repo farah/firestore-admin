@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import * as Yup from 'yup';
@@ -55,7 +55,7 @@ const useStyles = makeStyles(() => ({
 
 const ProductCreateForm: FC<ProductCreateFormProps> = ({ className, ...rest }) => {
   const classes = useStyles();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
 
   return (
@@ -97,7 +97,7 @@ const ProductCreateForm: FC<ProductCreateFormProps> = ({ className, ...rest }) =
           enqueueSnackbar('Product Created', {
             variant: 'success'
           });
-          history.push('/app/products');
+          navigate('/app/products');
         } catch (err) {
           console.error(err);
           setStatus({ success: false });

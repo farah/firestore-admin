@@ -340,10 +340,7 @@ function reduceChildRoutes({
   const key = item.title + depth;
 
   if (item.items) {
-    const open = matchPath(pathname, {
-      path: item.href,
-      exact: false
-    });
+    const open = matchPath(pathname, item.href);
 
     acc.push(
       <NavItem
